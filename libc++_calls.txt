@@ -1,0 +1,145 @@
+// supported in libplatform!
+U clock_gettime@@GLIBC_2.17 -> clock_gettime()
+U close@@GLIBC_2.2.5 -> file_close()
+U open@@GLIBC_2.2.5 -> file_open()
+U pthread_join@@GLIBC_2.2.5 -> thread_join()
+U pthread_cond_destroy@@GLIBC_2.3.2 -> ~condition_variable()
+U pthread_mutex_destroy@@GLIBC_2.2.5 -> ~mutex()
+U pthread_mutex_init@@GLIBC_2.2.5 -> mutex()
+U pthread_mutex_lock@@GLIBC_2.2.5 -> mutex_lock()
+U pthread_mutex_trylock@@GLIBC_2.2.5 -> mutex_try_lock()
+U pthread_mutex_unlock@@GLIBC_2.2.5 -> mutex_unlock()
+U pthread_self@@GLIBC_2.2.5 -> thread_self()
+U pthread_equal@@GLIBC_2.2.5 -> thread::operator==
+U read@@GLIBC_2.2.5 -> file_read()
+U stderr@@GLIBC_2.2.5
+U stdin@@GLIBC_2.2.5
+U stdout@@GLIBC_2.2.5
+
+// to be implemented as inline functions
+U isalpha@@GLIBC_2.2.5
+U isdigit@@GLIBC_2.2.5
+U isupper@@GLIBC_2.2.5
+U isxdigit@@GLIBC_2.2.5
+U iswalpha_l@@GLIBC_2.3
+U iswblank_l@@GLIBC_2.3
+U iswcntrl_l@@GLIBC_2.3
+U iswdigit_l@@GLIBC_2.3
+U iswlower_l@@GLIBC_2.3
+U iswprint_l@@GLIBC_2.3
+U iswpunct_l@@GLIBC_2.3
+U iswspace_l@@GLIBC_2.3
+U iswupper_l@@GLIBC_2.3
+U iswxdigit_l@@GLIBC_2.3
+U tolower_l@@GLIBC_2.3
+U toupper_l@@GLIBC_2.3
+U towlower_l@@GLIBC_2.3
+U towupper_l@@GLIBC_2.3
+U memchr@@GLIBC_2.2.5
+U memcmp@@GLIBC_2.2.5
+U memcpy@@GLIBC_2.14
+U memmove@@GLIBC_2.2.5
+U memset@@GLIBC_2.2.5
+U snprintf@@GLIBC_2.2.5
+U sscanf@@GLIBC_2.2.5
+U strcmp@@GLIBC_2.2.5
+U strcoll_l@@GLIBC_2.3
+U strerror_r@@GLIBC_2.2.5
+U strftime_l@@GLIBC_2.3
+U strlen@@GLIBC_2.2.5
+U strtod@@GLIBC_2.2.5
+U strtod_l@@GLIBC_2.3
+U strtof@@GLIBC_2.2.5
+U strtof_l@@GLIBC_2.3
+U strtold@@GLIBC_2.2.5
+U strtold_l@@GLIBC_2.3
+U strtol@@GLIBC_2.2.5
+U strtoll@@GLIBC_2.2.5
+U strtoll_l@@GLIBC_2.3.3
+U strtoul@@GLIBC_2.2.5
+U strtoull@@GLIBC_2.2.5
+U strtoull_l@@GLIBC_2.3.3
+U strxfrm_l@@GLIBC_2.3
+U swprintf@@GLIBC_2.2.5
+
+// this is just exiting the process group, or kill?
+U abort@@GLIBC_2.2.5
+
+// supplied by tcmalloc
+U calloc@@GLIBC_2.2.5
+U free@@GLIBC_2.2.5
+U malloc@@GLIBC_2.2.5
+U realloc@@GLIBC_2.2.5
+
+// to investigate
+U btowc@@GLIBC_2.2.5
+U mbrlen@@GLIBC_2.2.5
+U mbrtowc@@GLIBC_2.2.5
+U mbsnrtowcs@@GLIBC_2.2.5
+U mbsrtowcs@@GLIBC_2.2.5
+U mbtowc@@GLIBC_2.2.5
+U catclose@@GLIBC_2.2.5
+U catgets@@GLIBC_2.2.5
+U catopen@@GLIBC_2.2.5
+
+// how to handle buffered io and string/num conversion?
+U fflush@@GLIBC_2.2.5
+U fprintf@@GLIBC_2.2.5
+U freelocale@@GLIBC_2.3
+U fwrite@@GLIBC_2.2.5
+U getc@@GLIBC_2.2.5
+
+U __cxa_thread_atexit_impl@@GLIBC_2.18
+U localeconv@@GLIBC_2.2.5
+U nanosleep@@GLIBC_2.2.5
+U newlocale@@GLIBC_2.3
+U posix_memalign@@GLIBC_2.2.5
+
+U pthread_cond_wait@@GLIBC_2.3.2
+U pthread_cond_signal@@GLIBC_2.3.2
+U pthread_cond_broadcast@@GLIBC_2.3.2
+U pthread_cond_timedwait@@GLIBC_2.3.2
+U pthread_detach@@GLIBC_2.2.5
+U pthread_getspecific@@GLIBC_2.2.5
+U pthread_key_create@@GLIBC_2.2.5
+U pthread_mutexattr_destroy@@GLIBC_2.2.5
+U pthread_mutexattr_init@@GLIBC_2.2.5
+U pthread_mutexattr_settype@@GLIBC_2.2.5
+U pthread_setspecific@@GLIBC_2.2.5
+U sched_yield@@GLIBC_2.2.5
+U setlocale@@GLIBC_2.2.5
+U sysconf@@GLIBC_2.2.5
+U ungetc@@GLIBC_2.2.5
+U _Unwind_Resume@@GCC_3.0
+U uselocale@@GLIBC_2.3
+U vasprintf@@GLIBC_2.2.5
+U vsnprintf@@GLIBC_2.2.5
+U vsscanf@@GLIBC_2.2.5
+U wcrtomb@@GLIBC_2.2.5
+U wcscoll_l@@GLIBC_2.3
+U wcslen@@GLIBC_2.2.5
+U wcsnrtombs@@GLIBC_2.2.5
+U wcstod@@GLIBC_2.2.5
+U wcstof@@GLIBC_2.2.5
+U wcstold@@GLIBC_2.2.5
+U wcstol@@GLIBC_2.2.5
+U wcstoll@@GLIBC_2.2.5
+U wcstoul@@GLIBC_2.2.5
+U wcstoull@@GLIBC_2.2.5
+U wcsxfrm_l@@GLIBC_2.3
+U wctob@@GLIBC_2.2.5
+U wmemchr@@GLIBC_2.2.5
+U wmemcmp@@GLIBC_2.2.5
+U wmemcpy@@GLIBC_2.2.5
+U wmemmove@@GLIBC_2.2.5
+U wmemset@@GLIBC_2.2.5
+
+// likely in libunwind...
+U _Unwind_DeleteException@@GCC_3.0
+U _Unwind_GetIP@@GCC_3.0
+U _Unwind_GetLanguageSpecificData@@GCC_3.0
+U _Unwind_GetRegionStart@@GCC_3.0
+U _Unwind_RaiseException@@GCC_3.0
+U _Unwind_Resume@@GCC_3.0
+U _Unwind_SetGR@@GCC_3.0
+U _Unwind_SetIP@@GCC_3.0
